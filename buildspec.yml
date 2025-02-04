@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+
+  build:
+    commands:
+      - echo "Building the NestJS project..."
+      - npm run build
+
+  post_build:
+    commands:
+      - echo "Zipping the build artifacts..."
+      - zip -r backend.zip . -x "node_modules/*" ".git/*" ".aws/*"
+
+artifacts:
+  files:
+    - backend.zip
