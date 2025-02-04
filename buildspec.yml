@@ -5,8 +5,9 @@ phases:
     runtime-versions:
       nodejs: 22
     commands:
-      - echo "Installing dependencies..."
-      - npm install
+      - echo "Installing NestJS CLI and dependencies..."
+      - npm install -g @nestjs/cli typescript  
+      - npm install  
 
   build:
     commands:
