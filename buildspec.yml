@@ -13,6 +13,7 @@ phases:
     commands:
       - echo "Building the NestJS project..."
       - npm run build
+      - ls dist/
 
   post_build:
     commands:
