@@ -19,7 +19,7 @@ import { FavoritesService } from './favorites/favorites.service';
     }),
     MongooseModule.forRootAsync({
       useFactory: () => ({
-        uri: 'mongodb+srv://bouhamidisal:m3d8wq80tzClhhCp@pharmfuadeclosure.ujs6x.mongodb.net/PharmGarde',
+        uri: process.env.MONGO_URI,
       })
     }),
     UserModule, PharmacyModule, FavoritesModule, CommentsModule
