@@ -11,10 +11,12 @@ phases:
 
   build:
     commands:
+      - echo "Running tests..."
+      - npm run test  
       - echo "Building the NestJS project..."
       - npm run build
       - ls dist/
-
+        
   post_build:
     commands:
       - echo "Zipping the build artifacts..."
