@@ -9,10 +9,13 @@ phases:
       - npm install -g @nestjs/cli typescript  
       - npm install  
 
-  build:
+  pre_build:
     commands:
       - echo "Running tests..."
       - npm run test  
+
+  build:
+    commands:
       - echo "Building the NestJS project..."
       - npm run build
       - ls dist/
@@ -25,4 +28,4 @@ phases:
 artifacts:
   files:
     - backend.zip
-    - Procfile 
+    - Procfile  
